@@ -1,0 +1,61 @@
+#header-landing {
+    height: $header-height;
+    position: relative;
+    z-index: 10;
+    background-color: $bg-color;
+    
+    @media (max-width: $screen-medium) {
+        height: $header-height-mobile;
+    }
+
+    .header-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        padding-left: $header-padding;
+        padding-right: $header-padding;
+
+        @media (max-width: $screen-medium) {
+            padding-left: $header-padding-mobile;
+            padding-right: $header-padding-mobile;
+        }
+    }
+
+    .brand-part {
+        height: 100%;
+        
+        .logo-box {
+            height: 100%;
+            padding-top: $logo-box-header;
+            padding-bottom: $logo-box-header;
+            box-sizing: border-box;
+            display: inline-flex;
+            align-items: center;
+            color: #ffffff;
+            font-size: 34px;
+            font-family: 'Conthrax Sb', sans-serif;
+
+            @media (max-width: $screen-medium) {
+                font-size: 28px;
+            }
+
+            @media (max-width: $screen-small) {
+                font-size: 20px;
+            }
+        } 
+        .logo-image {
+            height: 80%;
+            max-width: 100%;
+            object-fit: contain;
+            margin-right: 22px;
+            margin-left: 15px;
+
+            
+            @media (max-width: $screen-small) { 
+                margin-left: 5px;
+                margin-right: 10px;
+            }
+        }
+    }
+}

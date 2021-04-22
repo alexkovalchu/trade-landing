@@ -1,0 +1,12 @@
+
+@import 'shared/styles/utilities/variables';
+@import 'shared/styles/layout/fonts';
+@import 'shared/styles/reset/reset';
+@import 'shared/styles/layout/main';
+
+// components
+@import 'shared/styles/components/header.scss';
+@import 'shared/styles/components/popups.scss';
+
+// pages
+@import 'shared/styles/pages/home';

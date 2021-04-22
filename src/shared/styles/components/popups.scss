@@ -1,0 +1,247 @@
+
+.popup-screen-full {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    z-index: 100;
+    font-family: 'Conthrax Sb', sans-serif;
+    color: white;
+    overflow-y: auto;
+
+    .close-button {
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        cursor: pointer;
+        z-index: 7;
+
+        @media (max-width: $screen-medium) {
+            top: 15px;
+            right: 15px;
+        }
+
+        img {
+            width: 25px;
+            height: 25px;
+        }
+    }
+
+    .popup-overlay {
+        position: fixed;
+        z-index: 5;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: $overlay-color;
+        opacity: 0.7;
+    }
+
+    .popup-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 6;
+        text-align: center;
+        line-height: 1.5;
+        max-width: 655px;
+        max-height: 100%;
+        overflow-x: auto;
+        background-color: $bg-color;
+        padding-left: $popup-side-padding;
+        padding-right: $popup-side-padding;
+        padding-bottom: $popup-side-padding;
+        box-shadow: $popup-shadow;
+        
+        @media (max-width: $screen-medium) {
+            padding: $header-padding-mobile;
+            box-sizing: border-box;
+            width: 100%;
+        }
+
+        .content-view {
+            margin-bottom: 25px;
+        }
+
+        .pre-signup-message {
+            font-family: 'Open Sans', sans-serif;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+
+        .signup-inputs {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+
+            .form-inputs {
+                width: 50%;
+                
+                @media (max-width: $screen-medium) {
+                    width: 100%;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+
+        .post-signup-message {
+            margin-bottom: 20px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 12px;
+            margin-left: -15px;
+            margin-right: -15px;
+            
+            @media (max-width: $screen-medium) {
+                margin-left: 0;
+                margin-right: 0;
+
+            }
+        }
+
+        .btn {
+            min-width: 220px;
+            padding: 15px;
+        }
+
+        .btn.outlined {
+            padding: 3px;
+            
+            .inner {
+                padding: 12px;
+            }
+        }
+
+        .btn.btn-icon {
+            padding: 0;
+            min-width: 0;
+        }
+
+        .accept-button-box {
+            margin-bottom: 15px;
+        }
+
+        .continue-text {
+            margin-top: 25px;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        .outlines-box {
+            width: 90%;
+            box-sizing: border-box;
+
+            .outlined-input {
+                box-sizing: border-box;
+                width: 100%;
+                padding: 15px 25px;
+            }
+        }
+        .signup-social {
+            margin-top: 30px;
+            display: flex;
+            flex-wrap: wrap;
+
+            justify-content: center;
+
+            .round-social-icon {
+                padding-left: $icons-buttons-offset;
+                padding-right: $icons-buttons-offset;
+                justify-self: center;
+
+                img {
+                    width: 60px;
+                }
+            }
+
+            .social-login-item {
+                width: 50%;
+                margin-bottom: 15px;
+
+                @media (max-width: $screen-medium) {
+                    width: 100%;
+                }
+
+                .btn.social-login {
+                    background-color: $bg-color;
+                    border-radius: 7px;
+                    width: 90%;
+                    border: 0;
+                    text-align: center;
+                    font-family: 'Open Sans', sans-serif;
+                    font-size: 18px;
+                    display: inline-flex;
+                    align-items: center;
+
+                    
+                    span {
+                        width: 100%;
+                        display: inline-block;
+                    }
+
+                    img {
+                        width: 22px;
+                        margin-top: -4px;
+                        margin-bottom: -4px;
+                        float: left;
+                        vertical-align: middle;
+                    }
+
+                    &.social-login-instagram {
+                        background-image: linear-gradient(90deg, #5448c6 0%, #cc389a 34%, #e54d3f 70%, #e3bf5f 100%);
+
+                        
+                    }
+
+                    &.social-login-google {
+                        background-color: #4484e9;
+                    }
+
+                    &.social-login-facebook {
+                        background-color: #24518c;
+                    }
+
+                    &.social-login-telegram {
+                        background-color: #24b6ff;
+                    }
+
+                    &.social-login-discord {
+                        background-color: #556ab3;
+                    }
+                    &.social-login-twitter {
+                        background-color: #24b6ff;
+                    }
+                }
+            }
+        }
+
+        /*.buttons-container {
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+        }*/
+    }
+
+    .logo-header {
+        .trade-logo-popup {
+            margin-top: 35px;
+            height: 109px;
+            margin-bottom: 10px;
+        }
+
+        .logo-text {
+            font-size: 35px;
+            margin-bottom: 23px;
+            margin-top: 10px;
+            line-height: 1em;
+        }
+    }
+}

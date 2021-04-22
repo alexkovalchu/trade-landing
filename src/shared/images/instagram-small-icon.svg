@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 258 259" width="258" height="259">
+	<defs>
+		<radialGradient id="grd1" gradientUnits="userSpaceOnUse"  cx="128.61" cy="257.219" r="255.342">
+			<stop offset="0" stop-color="#ffda73"  />
+			<stop offset="0.313" stop-color="#ff4a3e"  />
+			<stop offset="0.641" stop-color="#df4ca5"  />
+			<stop offset="1" stop-color="#3f58ae"  />
+		</radialGradient>
+		<radialGradient id="grd2" gradientUnits="userSpaceOnUse"  cx="128.61" cy="257.219" r="255.342">
+			<stop offset="0" stop-color="#ffda73"  />
+			<stop offset="0.313" stop-color="#ff4a3e"  />
+			<stop offset="0.641" stop-color="#df4ca5"  />
+			<stop offset="1" stop-color="#3f58ae"  />
+		</radialGradient>
+		<radialGradient id="grd3" gradientUnits="userSpaceOnUse"  cx="128.61" cy="257.219" r="255.342">
+			<stop offset="0" stop-color="#ffda73"  />
+			<stop offset="0.313" stop-color="#ff4a3e"  />
+			<stop offset="0.641" stop-color="#df4ca5"  />
+			<stop offset="1" stop-color="#3f58ae"  />
+		</radialGradient>
+		<radialGradient id="grd4" gradientUnits="userSpaceOnUse"  cx="128.611" cy="257.216" r="255.338">
+			<stop offset="0" stop-color="#ffda73"  />
+			<stop offset="0.313" stop-color="#ff4a3e"  />
+			<stop offset="0.641" stop-color="#df4ca5"  />
+			<stop offset="1" stop-color="#3f58ae"  />
+		</radialGradient>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: url(#grd1) } 
+		.shp1 { fill: url(#grd2) } 
+		.shp2 { fill: url(#grd3) } 
+		.shp3 { fill: url(#grd4) } 
+	</style>
+	<g id="&lt;Group&gt;">
+		<g id="&lt;Group&gt;">
+			<path id="&lt;Compound Path&gt;" fill-rule="evenodd" class="shp0" d="M257.87 129.24L257.87 129.24C257.87 200.39 200.2 258.06 129.06 258.06L129.05 258.06C57.91 258.06 0.24 200.39 0.24 129.24L0.24 129.24C0.24 58.1 57.91 0.42 129.05 0.42L129.06 0.42C200.2 0.42 257.87 58.1 257.87 129.24ZM247.36 129.24C247.36 97.64 235.06 67.93 212.71 45.58C190.37 23.24 160.66 10.93 129.06 10.93C97.45 10.93 67.74 23.24 45.4 45.58C23.05 67.93 10.75 97.64 10.75 129.24C10.75 160.84 23.05 190.55 45.4 212.9C67.74 235.24 97.45 247.55 129.05 247.55C160.66 247.55 190.37 235.24 212.71 212.9C235.06 190.55 247.36 160.84 247.36 129.24Z" />
+		</g>
+		<g id="&lt;Group&gt;">
+			<g id="&lt;Group&gt;">
+				<path id="&lt;Compound Path&gt;" fill-rule="evenodd" class="shp1" d="M161.35 202.39L96.76 202.39C74.23 202.39 55.9 184.07 55.9 161.54L55.9 96.94C55.9 74.42 74.23 56.09 96.76 56.09L161.35 56.09C183.88 56.09 202.2 74.42 202.2 96.94L202.2 161.54C202.2 184.07 183.88 202.39 161.35 202.39ZM96.76 67.94C80.76 67.94 67.75 80.95 67.75 96.94L67.75 161.54C67.75 177.53 80.76 190.55 96.76 190.55L161.35 190.55C177.35 190.55 190.36 177.53 190.36 161.54L190.36 96.94C190.36 80.95 177.35 67.94 161.35 67.94L96.76 67.94Z" />
+			</g>
+			<g id="&lt;Group&gt;">
+				<path id="&lt;Compound Path&gt;" fill-rule="evenodd" class="shp2" d="M129.05 167.74C107.83 167.74 90.56 150.47 90.56 129.24C90.56 108.02 107.83 90.75 129.05 90.75C150.28 90.75 167.55 108.02 167.55 129.24C167.55 150.47 150.28 167.74 129.05 167.74ZM129.05 102.59C114.36 102.59 102.41 114.55 102.41 129.24C102.41 143.94 114.36 155.89 129.05 155.89L129.05 155.89C143.75 155.89 155.7 143.94 155.7 129.24C155.7 114.55 143.75 102.59 129.05 102.59Z" />
+			</g>
+			<g id="&lt;Group&gt;">
+				<path id="&lt;Compound Path&gt;" class="shp3" d="M169.17 95.13C165.86 95.13 163.18 92.45 163.18 89.14C163.18 85.84 165.86 83.15 169.17 83.15C172.47 83.15 175.16 85.84 175.16 89.14C175.16 92.45 172.47 95.13 169.17 95.13Z" />
+			</g>
+		</g>
+	</g>
+</svg>

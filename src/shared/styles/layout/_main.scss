@@ -1,0 +1,82 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: $bg-color;
+    font-size: 16px;
+}
+button, .btn {
+    font-family: 'Conthrax Sb', sans-serif;
+}
+.btn {
+    padding: $button-paddings;
+    border-radius: $button-height-radius;
+    border-style: solid;
+    color: $button-color;
+    outline: none;
+    cursor: pointer;
+
+    &:active, &:focus {
+        outline: none;
+    }
+
+    &.filled {
+        border-width: 0px;
+        background-image: linear-gradient(270deg, #db5aac 0%, #b554aa 34%, #47cdf4 70%, #66d4e4 100%);
+    }
+
+    &.outlined {
+        border-width: 0px;
+        background-image: linear-gradient(270deg, #db5aac 0%, #b554aa 34%, #47cdf4 70%, #66d4e4 100%);
+        padding: 3px;
+        box-sizing: border-box;
+
+        .inner {
+            padding: $button-paddings-oulined;
+            background-color: $bg-color;
+            border-radius: $button-height-radius;
+            display: inline-block;
+            width: 100%;
+            box-sizing: border-box;
+        }
+    }
+
+    &.btn-icon {
+        padding: 0;
+        background-color: transparent;
+        border: 0;
+    }
+}
+.outlines-box {
+    background-image: linear-gradient(270deg, #db5aac 0%, #b554aa 34%, #47cdf4 70%, #66d4e4 100%);
+    display: inline-block;
+    padding: 3px;
+    border-radius: $button-height-radius;
+
+    .outlined-input {
+        border: 0;
+        outline: 0;
+        height: 100%;
+        background-color: $bg-color;
+        padding: $button-paddings-oulined;
+        border-radius: $button-height-radius;
+        font-family: 'Open Sans', sans-serif;
+        color: white;
+
+        &::placeholder {
+            color: white;
+        }
+    }
+}
+.footer {
+    color: white;
+
+    .footer-links {
+        padding-top: $popup-side-padding;
+        padding-bottom: $popup-side-padding;
+        text-align: center;
+
+        a {
+            font-size: 0.8em;
+            color: white;
+        }
+    }
+}
