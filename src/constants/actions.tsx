@@ -9,7 +9,19 @@ export function generateActions (name: string) {
 
 export const ActionList = {
     popup: {
-        show: "POPUP_SHOW",
-        hide: "POPUP_HIDE"
+        signup: {
+            show: "SIGNUP_POPUP_SHOW",
+            hide: "SIGNUP_POPUP_HIDE"
+        },
+        success: {
+            show: "SUCCESS_POPUP_SHOW",
+            hide: "SUCCESS_POPUP_HIDE"
+        }
+    },
+    forms: {
+        signup: {
+            submit: "SIGNUP_FORM_SUBMIT",
+            reset: "SIGNUP_FORM_RESET"
+        }
     }
 }

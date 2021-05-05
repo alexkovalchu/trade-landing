@@ -69,10 +69,10 @@
 
         .pre-signup-message {
             font-family: 'Open Sans', sans-serif;
-            max-width: 400px;
+            max-width: 560px;
             margin-left: auto;
             margin-right: auto;
-            font-size: 15px;
+            font-size: $small-text-size;
             margin-bottom: 20px;
         }
 
@@ -94,7 +94,7 @@
         .post-signup-message {
             margin-bottom: 20px;
             font-family: 'Open Sans', sans-serif;
-            font-size: 12px;
+            font-size: $smaller-text-size;
             margin-left: -15px;
             margin-right: -15px;
             
@@ -127,8 +127,21 @@
             margin-bottom: 15px;
         }
 
+        .continue-or-separetor {
+            &::before, &::after{
+                content: " ";
+                width: 30px;
+                margin-left: 15px;
+                margin-right: 15px;
+                margin-bottom: 6px;
+                border-top: solid 1px #eeeeee;
+                display: inline-block;
+            }
+
+        }
+
         .continue-text {
-            margin-top: 25px;
+            margin-top: 10px;
         }
 
         img {
@@ -177,7 +190,7 @@
                     border: 0;
                     text-align: center;
                     font-family: 'Open Sans', sans-serif;
-                    font-size: 18px;
+                    font-size: $normal-text-size;
                     display: inline-flex;
                     align-items: center;
 
@@ -228,6 +241,23 @@
             width: 100%;
             justify-content: space-around;
         }*/
+
+        .signup-checkboxes {
+            text-align: left;
+            font-size: $smaller-text-size;
+            max-width: 560px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    .animated-image-scale {
+        img {
+            animation-name: scaling;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+        }
     }
 
     .logo-header {
@@ -238,7 +268,7 @@
         }
 
         .logo-text {
-            font-size: 35px;
+            font-size: $large-text-size;
             margin-bottom: 23px;
             margin-top: 10px;
             line-height: 1em;

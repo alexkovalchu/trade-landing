@@ -1,12 +1,17 @@
 
 @import 'shared/styles/utilities/variables';
+@import 'shared/styles/utilities/mixins';
+@import 'shared/styles/utilities/animations';
 @import 'shared/styles/layout/fonts';
 @import 'shared/styles/reset/reset';
 @import 'shared/styles/layout/main';
+@import 'shared/styles/layout/offsets';
 
 // components
 @import 'shared/styles/components/header.scss';
 @import 'shared/styles/components/popups.scss';
+@import 'shared/styles/components/inputs.scss';
 
 // pages
 @import 'shared/styles/pages/home';
+@import 'shared/styles/pages/privacy-policy';

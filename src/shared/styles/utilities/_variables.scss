@@ -13,6 +13,7 @@ $button-paddings: 10px 30px;
 $button-paddings-oulined: 8px 28px;
 $button-color: #ffffff;
 $icons-buttons-offset: 15px;
+$button-link-bg: #35ace0;
 
 // media screens
 $screen-small: 576px;
@@ -27,5 +28,15 @@ $popup-shadow: 0 0 10px rgb(215 89 172 / 50%);
 $box-shadow: 0 0 10px rgb(11 230 247 / 50%);
 $overlay-color: #0f0a0f;
 
+// font-sizes
+$large-text-size: 35px;
+$normal-text-size: 18px;
+$small-text-size: 15px;
+$smaller-text-size: 12px;
+
 // colors
 $bg-color: #0a0a0a;
+$contet-link-color: #24b6ff;
+
+// offsets
+$offset-step: 5px;

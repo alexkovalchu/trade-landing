@@ -4,5 +4,19 @@ export interface Action {
 }
 
 export interface PopupStore {
-    signUpPopupState: string
+    signUpPopupState: string,
+    successSignup: string
+}
+
+export interface FormsStore {
+    formSignUpStatus: string
+}
+
+export interface SignUpData {
+    firstName: string,
+    lastName: string,
+    email: string,
+    password: string,
+    agreeTerms?: boolean,
+    is16orOlder?: boolean
 }

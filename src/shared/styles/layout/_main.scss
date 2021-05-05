@@ -13,6 +13,7 @@ button, .btn {
     color: $button-color;
     outline: none;
     cursor: pointer;
+    text-decoration: none;
 
     &:active, &:focus {
         outline: none;
@@ -43,6 +44,31 @@ button, .btn {
         padding: 0;
         background-color: transparent;
         border: 0;
+    }
+
+    &.btn-link {
+        background-color: $button-link-bg;
+        padding-left: 25px !important;
+        padding-right: 40px !important;
+        text-transform: uppercase;
+
+        &::after {
+            content: " ";
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+            vertical-align: middle;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            margin-top: -2px;
+            margin-right: -16px;
+            background-image: url('../../images/right-arrow.svg');
+            animation-name: slide-arrow-right;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+        }
     }
 }
 .outlines-box {

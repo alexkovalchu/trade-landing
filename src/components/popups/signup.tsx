@@ -1,24 +1,34 @@
-import React, { useEffect, useState } from "react";
+import React, {  useCallback, useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { generateActions, ActionList } from "../../constants/actions";
+import { SignUpData } from "../../constants/types";
+import SignUpForm from "../forms/signup-form";
 import FcebookIcon from "../../shared/images/facebook-small-icon.svg";
 import InstagramIcon from "../../shared/images/instagram-small-icon.svg";
 import CloseButton from "../../shared/images/close-button.svg";
-import TradeLogo from "../../shared/images/trade-logo-svg.svg";
 import GoogleIcon from "../../shared/images/google-small-icon.svg";
 import TelegramIcon from "../../shared/images/telegram-small-icon.svg";
-// import DiscordIcon from "../../shared/images/discord-icon.svg";
 import TwitterIcon from "../../shared/images/twitter-small-icon.svg";
-import ChromeLogoIcon from "../../shared/images/1.png";
+import ChromeLogoIcon from "../../shared/images/1.png"
 
-function SignUpPopup (props: { status: string, hidePopUp: ()=>void, showPopUp: ()=>void }) {
-    let [first, updateFirst ] = useState(true);
+let timeoutId:NodeJS.Timeout | undefined;
+
+function SignUpPopup (props: { status: string, hidePopUp: ()=>void, showPopUp: ()=>void, submitSignUpRequest: (data: SignUpData)=>void }) {
+    const [first, updateFirst ] = useState(true);
+
+    const formSubmitHandle = useCallback((data: SignUpData)=>{
+        props.submitSignUpRequest(data);
+    }, [props.submitSignUpRequest]);
 
     useEffect(()=>{
         if (first) {
-            setTimeout(props.showPopUp, 12000);
+            timeoutId = setTimeout(props.showPopUp, 12000);
             updateFirst(false);
         }
+        if (props.status === 'open') {
+           if (timeoutId) clearTimeout(timeoutId);
+        }
+
         return;
     })
 
@@ -34,32 +44,11 @@ function SignUpPopup (props: { status: string, hidePopUp: ()=>void, showPopUp: (
                 TRADE is a fast-paced multiplayer game where players can enter timed rounds and play their peers to see whose trading prowess is best.
             </div>
             <div className="pre-signup-message">
-                Sign up below to join our closed alpha and receive notifications when tournaments are live
+                Sign up below to receive notification when multiplayer tournaments are live. Once you sign up, you’ll get exclusive access to our closed alpha Telegram group where you can play single player.
             </div>
-            <div className="signup-inputs">
-                <div className="form-inputs">
-                    <div className="outlines-box">
-                        <input className="outlined-input" type="email" placeholder="Email" />
-                    </div>
-                </div>
-                <div className="form-inputs">
-                    <div className="outlines-box">
-                        <input className="outlined-input" type="password" placeholder="Password" />
-                    </div>
-                </div>
-            </div>
-            <div className="post-signup-message">
-                We use cookies that are necessary to operate our website. By continuing, you agree to be bound by our Privacy Policy. Please choose whether or not to give us your consent to carry out profiling and use your data for marketing purposes. 
-            </div>
-            <div className="buttons-container">
-                <div className="accept-button-box">
-                    <button className="btn filled">Accept and Create</button>
-                </div>
-                <div className="accept-button-box">
-                    <button className="btn outlined"><span className="inner">Skip and Create</span></button>
-                </div>
-            </div>
-            <div className="continue-text">  Or continue with  </div>
+            <SignUpForm onSubmit={formSubmitHandle} />
+            <div className="continue-or-separetor">OR</div>
+            <div className="continue-text">  continue with  </div>
             <div className="signup-social">
                 <div className="round-social-icon"> 
                     <button className="btn btn-icon"><img src={GoogleIcon} /></button>
@@ -85,9 +74,12 @@ export default connect((state:{ [key: string]: any }) => ({
     status: state.popups.signUpPopupState
 }), dispatch=>({
     hidePopUp: ()=>{
-        dispatch({ type: generateActions(ActionList.popup.hide).request() });
+        dispatch({ type: generateActions(ActionList.popup.signup.hide).request() });
     },
     showPopUp: ()=>{
-        dispatch({ type: generateActions(ActionList.popup.show).request() });
+        dispatch({ type: generateActions(ActionList.popup.signup.show).request() });
+    },
+    submitSignUpRequest: (data: SignUpData)=>{
+        dispatch({ type: generateActions(ActionList.forms.signup.submit).request(), payload: data })
     }
 }))(SignUpPopup);

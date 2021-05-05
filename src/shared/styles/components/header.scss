@@ -8,6 +8,10 @@
         height: $header-height-mobile;
     }
 
+    a {
+        text-decoration: none;
+    }
+
     .header-row {
         display: flex;
         justify-content: space-between;

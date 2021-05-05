@@ -1,0 +1,7 @@
+@mixin offsetGenrator($prefix, $property, $length) {
+    @for $i from 0 to $length {
+        .#{$prefix}-#{$i} {
+            #{$property}: $i * $offset-step;
+        }
+    }
+}

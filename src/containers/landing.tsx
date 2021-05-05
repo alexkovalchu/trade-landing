@@ -1,8 +1,8 @@
 import React from 'react';
 import Header from "../components/header";
 import Footer from "../components/footer";
-import SignUpPopup from "../components/popups/signup";
 import { TestimonialsList } from "../constants/testimonials";
+import introduceVideo from "../shared/images/introduce-video.jpg";
 
 function LandingPage() {
 
@@ -10,7 +10,7 @@ function LandingPage() {
         <Header />
         <div className="video-container">
             <div className="video-box">
-                <video autoPlay={true} playsInline={true} muted={true} loop={true} className="video-box-item" id="backgound-video">
+                <video autoPlay={true} playsInline={true} muted={true} loop={true} className="video-box-item" id="backgound-video" poster={introduceVideo}>
                     <source src="https://bionictraderassets.s3.amazonaws.com/videos/introduce-video.mp4" type="video/mp4" />
                     Your browser does not support HTML5 video.
                 </video>
@@ -28,7 +28,6 @@ function LandingPage() {
                 </div>
             </div>
         </div>
-        <SignUpPopup />
         <Footer />
     </div>)
 }

@@ -1,0 +1,28 @@
+.html-container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #ffffff;
+    font-size: $small-text-size;
+    line-height: 1.4em;
+    margin-top: 30px;
+    margin-bottom: 50px;
+
+    table td {
+        padding: 15px;
+        border-bottom: solid 1px #aaaaaa;
+    }
+
+    p {
+        margin-bottom: 7px;
+    }
+
+    a {
+        color: $contet-link-color;
+    }
+
+    ul {
+        padding-left: 30px;
+        list-style-type: disc;
+    }
+}

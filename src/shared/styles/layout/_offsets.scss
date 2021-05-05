@@ -1,0 +1,5 @@
+
+@include offsetGenrator('pt', 'padding-top', 6);
+@include offsetGenrator('pb', 'padding-bottom', 6);
+@include offsetGenrator('mt', 'margin-top', 6);
+@include offsetGenrator('mb', 'margin-bottom', 6);

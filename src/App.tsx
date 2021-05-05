@@ -8,6 +8,7 @@ import reducer from "./reducers";
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 // << pages
 import LandingPage from "./containers/landing";
+import PrivacyPolicyPage from "./containers/privacy-policy";
 // pages >>
 import './App.scss';
 
@@ -19,7 +20,8 @@ sagaMiddleware.run(actionsSaga);
 function App() {
   return (<Provider store={store}>
       <Router>
-        <Route path="/" component={LandingPage} />
+        <Route path="/" exact component={LandingPage} />
+        <Route path="/privacy-policy" exact component={PrivacyPolicyPage} />
       </Router>
     </Provider>);
 }
