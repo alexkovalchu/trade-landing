@@ -4,12 +4,16 @@ export interface Action {
 }
 
 export interface PopupStore {
-    signUpPopupState: string,
-    successSignup: string
+    signUpPopupState: string;
+    successSignup: string;
 }
 
 export interface FormsStore {
-    formSignUpStatus: string
+    formSignUpStatus: string;
+}
+
+export interface RedirectStore {
+    redirectURL: string;
 }
 
 export interface SignUpData {

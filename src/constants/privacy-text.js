@@ -1,4 +1,4 @@
-export const PrivacyPoliceHTML = `<h2 align="center"> GLOBAL LIQUIDITY PRIVACY POLICY </h2>
+export const PrivacyPoliceHTML = `<p>&nbsp;</p><h2 align="center"> Global Liquidity <br/> Terms of Service and Privacy Policy </h2>
     <h3>  Introduction </h3>
     <P> This Privacy Policy is effective as of May &shy;&shy;&shy;&shy;&shy;&shy;3, 2021, and represents the Privacy Policy of GLOBAL LIQUIDITY, INC. (“<B>Global
     Liquidity</B>,”

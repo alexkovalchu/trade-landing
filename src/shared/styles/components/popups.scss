@@ -64,11 +64,10 @@
         }
 
         .content-view {
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
         .pre-signup-message {
-            font-family: 'Open Sans', sans-serif;
             max-width: 560px;
             margin-left: auto;
             margin-right: auto;
@@ -251,6 +250,14 @@
         }
     }
 
+    .signup-form-box {
+        .signup-checkboxes {
+            a {
+                color: #ffffff;
+            }
+        }
+    }
+
     .animated-image-scale {
         img {
             animation-name: scaling;
@@ -269,7 +276,7 @@
 
         .logo-text {
             font-size: $large-text-size;
-            margin-bottom: 23px;
+            margin-bottom: 18px;
             margin-top: 10px;
             line-height: 1em;
         }

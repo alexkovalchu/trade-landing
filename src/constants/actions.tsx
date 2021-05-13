@@ -23,5 +23,9 @@ export const ActionList = {
             submit: "SIGNUP_FORM_SUBMIT",
             reset: "SIGNUP_FORM_RESET"
         }
+    },
+    redirect: {
+        set: 'SET_SUBMIT_REDIRECT',
+        clear: 'CLEAR_SUBMIT_REDIRECT'
     }
 }

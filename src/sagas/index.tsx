@@ -38,9 +38,25 @@ function* hideSuccessRequest(action: Action) {
 function* submitSignUp (action: Action) {
     try {
         yield put({ type: generateActions(ActionList.popup.signup.hide).request() });
-        yield put({ type: generateActions(ActionList.popup.success.show).request() });
+        yield put({ type: generateActions(ActionList.redirect.set).request(), payload: '/confirm' });
     } catch(err) {
         yield put({ type: generateActions(ActionList.forms.signup.submit).failed() });
+    }
+}
+
+function* redirectRequest(action: Action) {
+    try {
+        yield put({ type: generateActions(ActionList.redirect.set).success(), payload: action.payload });
+    } catch(err) {
+        yield put({ type: generateActions(ActionList.redirect.set).failed() });
+    }
+}
+
+function* redirectClear(action: Action) {
+    try {
+        yield put({ type: generateActions(ActionList.redirect.clear).success() });
+    } catch(err) {
+        yield put({ type: generateActions(ActionList.redirect.clear).failed() });
     }
 }
 
@@ -50,6 +66,8 @@ function* actionsSaga() {
     yield takeEvery(generateActions(ActionList.popup.success.hide).request(), hideSuccessRequest);
     yield takeEvery(generateActions(ActionList.popup.success.show).request(), showSuccessRequest);
     yield takeEvery(generateActions(ActionList.forms.signup.submit).request(), submitSignUp);
+    yield takeEvery(generateActions(ActionList.redirect.set).request(), redirectRequest);
+    yield takeEvery(generateActions(ActionList.redirect.clear).request(), redirectClear);
 }
 
 export default actionsSaga;

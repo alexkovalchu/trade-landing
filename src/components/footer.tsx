@@ -12,8 +12,6 @@ function Footer() {
             <div className="footer-container">
                 <div className="footer-links">
                     <Link className="footer-link" to="privacy-policy"> Privacy Policy </Link>
-                    &nbsp;/&nbsp;
-                    <a className="footer-link" href="#"> Terms of Service </a>
                 </div>
             </div>
         </div>

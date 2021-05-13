@@ -1,4 +1,5 @@
 import React, {  useCallback, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import { SignUpData } from "../../constants/types";
 
 
@@ -46,7 +47,7 @@ function SignUpForm (props: { onSubmit?: (data: SignUpData )=>void }) {
         <div className="signup-checkboxes mb-2">
             <div className="checkbox-input mb-1">
                 <input type="checkbox" required name="agree-terms-of-use" id="agree-terms-of-use" />
-                <label htmlFor="agree-terms-of-use"> I agree to the Terms of Service and Privacy Policy. </label>
+                <label htmlFor="agree-terms-of-use"> I agree to the <Link to="/privacy-policy">Privacy Policy</Link> </label>
             </div>
             <div className="checkbox-input"> 
                 <input type="checkbox" required name="older-16" id="older-16" />
