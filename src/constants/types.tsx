@@ -6,6 +6,8 @@ export interface Action {
 export interface PopupStore {
     signUpPopupState: string;
     successSignup: string;
+    socialLoginPopUp: string;
+    networkForLogin: string;
 }
 
 export interface FormsStore {

@@ -16,6 +16,10 @@ export const ActionList = {
         success: {
             show: "SUCCESS_POPUP_SHOW",
             hide: "SUCCESS_POPUP_HIDE"
+        },
+        socialLogin: {
+            show: "SOCIAL_POPUP_SHOW",
+            hide: "SOCIAL_POPUP_HIDE"
         }
     },
     forms: {

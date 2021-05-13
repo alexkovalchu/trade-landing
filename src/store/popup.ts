@@ -1,5 +1,7 @@
 
 export default {
     signUpPopupState: 'close', // popup states: close, open
-    successSignup: 'close'
+    successSignup: 'close',
+    socialLoginPopUp: 'close',
+    networkForLogin: ''
 }

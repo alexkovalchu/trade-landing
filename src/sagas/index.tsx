@@ -60,6 +60,22 @@ function* redirectClear(action: Action) {
     }
 }
 
+function* requestSocialLoginShow (action: Action) {
+    try {
+        yield put({ type: generateActions(ActionList.popup.socialLogin.show).success(), payload: action.payload });
+    } catch(err) {
+        yield put({ type: generateActions(ActionList.popup.socialLogin.show).failed() });
+    }
+}
+
+function* requestSocialLoginHide (action: Action) {
+    try {
+        yield put({ type: generateActions(ActionList.popup.socialLogin.hide).success() });
+    } catch(err) {
+        yield put({ type: generateActions(ActionList.popup.socialLogin.hide).failed() });
+    }
+}
+
 function* actionsSaga() {
     yield takeEvery(generateActions(ActionList.popup.signup.show).request(), showPopUpRequest);
     yield takeEvery(generateActions(ActionList.popup.signup.hide).request(), hidePopUpRequest);
@@ -68,6 +84,8 @@ function* actionsSaga() {
     yield takeEvery(generateActions(ActionList.forms.signup.submit).request(), submitSignUp);
     yield takeEvery(generateActions(ActionList.redirect.set).request(), redirectRequest);
     yield takeEvery(generateActions(ActionList.redirect.clear).request(), redirectClear);
+    yield takeEvery(generateActions(ActionList.popup.socialLogin.show).request(), requestSocialLoginShow);
+    yield takeEvery(generateActions(ActionList.popup.socialLogin.hide).request(),requestSocialLoginHide);
 }
 
 export default actionsSaga;

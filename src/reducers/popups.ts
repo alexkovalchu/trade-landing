@@ -17,6 +17,12 @@ function popupsReducers(state: PopupStore = popups, action: Action): PopupStore 
         case generateActions(ActionList.popup.success.hide).success():
             state = Object.assign({}, state, { successSignup: 'close' });
         break;
+        case generateActions(ActionList.popup.socialLogin.show).success():
+            state = Object.assign({}, state, { socialLoginPopUp: 'open', networkForLogin: action.payload?action.payload.network:'' });
+        break;
+        case generateActions(ActionList.popup.socialLogin.hide).success():
+            state = Object.assign({}, state, { socialLoginPopUp: 'close', networkForLogin: '' });
+        break;
     }
 
     return state;

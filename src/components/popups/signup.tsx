@@ -12,13 +12,24 @@ import TwitterIcon from "../../shared/images/twitter-small-icon.svg";
 import ChromeLogoIcon from "../../shared/images/1.png"
 
 let timeoutId:NodeJS.Timeout | undefined;
+interface SignUpPopupProps { 
+    status: string; 
+    hidePopUp: ()=>void;
+    showPopUp: ()=>void; 
+    submitSignUpRequest: (data: SignUpData)=>void;
+    showSocialLogin: (network: string)=>void 
+}
 
-function SignUpPopup (props: { status: string, hidePopUp: ()=>void, showPopUp: ()=>void, submitSignUpRequest: (data: SignUpData)=>void }) {
+function SignUpPopup (props: SignUpPopupProps) {
     const [first, updateFirst ] = useState(true);
 
     const formSubmitHandle = useCallback((data: SignUpData)=>{
         props.submitSignUpRequest(data);
     }, [props.submitSignUpRequest]);
+
+    const socailClickHandle = useCallback((network: string)=>{
+        return ()=>{ props.showSocialLogin(network); }
+    }, [props.showSocialLogin]);    
 
     useEffect(()=>{
         if (first) {
@@ -51,19 +62,19 @@ function SignUpPopup (props: { status: string, hidePopUp: ()=>void, showPopUp: (
             <div className="continue-text">  continue with  </div>
             <div className="signup-social">
                 <div className="round-social-icon"> 
-                    <button className="btn btn-icon"><img src={GoogleIcon} /></button>
+                    <button className="btn btn-icon" onClick={socailClickHandle('google')}><img src={GoogleIcon} /></button>
                 </div>
                 <div className="round-social-icon"> 
-                    <button className="btn btn-icon"><img src={FcebookIcon} /></button>
+                    <button className="btn btn-icon" onClick={socailClickHandle('facebook')}><img src={FcebookIcon} /></button>
                 </div>
                 <div className="round-social-icon"> 
-                    <button className="btn btn-icon"><img src={TelegramIcon} /></button>
+                    <button className="btn btn-icon" onClick={socailClickHandle('telegram')}><img src={TelegramIcon} /></button>
                 </div>
                 <div className="round-social-icon"> 
-                    <button className="btn btn-icon"><img src={InstagramIcon} /></button>
+                    <button className="btn btn-icon" onClick={socailClickHandle('instagram')}><img src={InstagramIcon} /></button>
                 </div>
                 <div className="round-social-icon"> 
-                    <button className="btn btn-icon"><img src={TwitterIcon} /></button>
+                    <button className="btn btn-icon" onClick={socailClickHandle('twitter')}><img src={TwitterIcon} /></button>
                 </div>
             </div>
         </div>
@@ -81,5 +92,8 @@ export default connect((state:{ [key: string]: any }) => ({
     },
     submitSignUpRequest: (data: SignUpData)=>{
         dispatch({ type: generateActions(ActionList.forms.signup.submit).request(), payload: data })
+    },
+    showSocialLogin: (network: string) => {
+        dispatch({ type: generateActions(ActionList.popup.socialLogin.show).request(), payload: { network } });
     }
 }))(SignUpPopup);
