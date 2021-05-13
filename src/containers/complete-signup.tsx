@@ -28,7 +28,7 @@ function ConfirmSignUp () {
             <div className="bottom-text mt-5 pt-5">
                 Thanks again for joining and please share the game with your friends        
             </div>
-            <div className="website-show mt-5 pt-5">tradeclosedalpha.com</div>
+            <div className="website-show mt-5 pt-5">tradethegame.com</div>
         </div>
     </div>);
 }
