@@ -48,6 +48,11 @@
         .website-show {
             font-size: $large-text-size;
             text-transform: uppercase;
+
+            .website-show-link {
+                color: white;
+                text-decoration: none;
+            }
         }
     }
 
